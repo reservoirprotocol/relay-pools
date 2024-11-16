@@ -44,3 +44,10 @@ What’s interesting about this pool design is that effectively 100% of volume i
   - toxic orderflow tends to come in bursts, when solvers receive more demand than anticipated
   - this means that liquidity is often idle, and can be deployed into other protocols to earn a “base yield” when it’s not in use
   - this also pairs nicely with permissionless deployment, because you can have different pools with different risk / yield profiles
+
+#### Example
+
+- user triggered proxied canonical withdrawal: https://odyssey-explorer.ithaca.xyz/tx/0x155d571ab7ec45119e27207f14e6960f7b454185df2dc2600cd00b1ed5c9e24a
+- withdrawal went through the fast path, so the user got their funds almost instantly: https://sepolia.etherscan.io/tx/0xf27e29c7bfccef958e2f090f79eea249b02eaf89d2ccd52b146c9892dd11f1cf
+- here's the corresponding cross-chain message relayed via Hyperlane: https://explorer.hyperlane.xyz/message/0xd6d803ad98aba91aca4082e8eae51d848522abef1465614f2e0093556c1c61bf
+- once the canonical withdrawal went through, the pool got replenished: https://sepolia.etherscan.io/tx/0xd61e8c31c0498117aa095328b05d6ee29e8ccc04d87792bef4917f8039d576f3
